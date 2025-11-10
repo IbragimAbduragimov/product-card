@@ -9,7 +9,7 @@
   font-weight: 400;
 }
 
-.card-container{
+.card-container {
   width: 340px;
   height: 573px;
   padding: 25px;
@@ -35,18 +35,30 @@
 }
 
 .product-descripton {
- margin-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.product-compaund {
+  margin-bottom: 25px;
+  margin-top: 3px;
 }
 
 .product-compaund-item {
+  margin-top: 5px;
   margin-left: 14px;
 }
 
-.product-price-container{
+.product-price-label {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.product-price-conteiner {
   display: flex;
   align-items: baseline;
   justify-content: flex-end;
-  gap: 131px;
+  gap: 185px;
 }
 
 .main-title {
@@ -91,4 +103,5 @@
   height: 697px;
   position: absolute; 
   margin-left: -320px; 
+  z-index: -1;
 }
