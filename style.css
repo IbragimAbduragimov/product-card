@@ -35,22 +35,11 @@
 }
 
 .product-descripton {
-margin-bottom: 15px;
-}
-
-.product-compaund{
-  margin-top: 5px;
-  list-style: circle;
+ margin-bottom: 15px;
 }
 
 .product-compaund-item {
   margin-left: 14px;
-}
-
-.product-price-label{
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
 }
 
 .product-price-container{
@@ -96,13 +85,10 @@ margin-bottom: 15px;
   margin: auto;
 }
 
-
-
-
 .background-container {
   background-image: url('/images/background-flowers.png');
   width: 790px;
   height: 697px;
   position: absolute; 
-  margin left: 10px; 
+  margin-left: -320px; 
 }
