@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0px; 
   padding: 0px;
@@ -66,15 +66,15 @@
   font-weight: 400;
   font-size: 70px;
   line-height: 78px;
-  width: 846;
-  height: 78;
+  width: 846px;
+  height: 78px;
   margin-bottom: 90px;
   margin-top: 220px;
   left: 217px;
 }
 
 .product-list {
-  position:relative;
+  position: relative;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
