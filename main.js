@@ -1,20 +1,20 @@
 //№1 кнопка которая меняет цвет карточки
 
-const ColorCard = document.querySelector('.card-container');
-const changeColorCardButton = document.querySelector('#color-card-button');
+const productCard = document.querySelector('.card-container');
+const changeColorCardButton = document.querySelector('#change-color-card');
 
 changeColorCardButton.addEventListener('click', () => {
-  ColorCard.style.backgroundColor = 'red';
+  productCard.style.backgroundColor = 'red';
 })
 
 //№2 кнопка которая меняет цвет всех карточек
 
-const ColorCards = document.querySelectorAll('.card-container')
-const changeColorCardsButton = document.querySelector('#color-cards-button');
+const productCards = document.querySelectorAll('.card-container')
+const changeColorCardsButton = document.querySelector('#change-color-all-cards');
 
 
 changeColorCardsButton.addEventListener('click', () => {
-ColorCards.forEach((cards) => cards.style.backgroundColor = 'blue')
+productCards.forEach((cards) => cards.style.backgroundColor = 'blue')
 });
 
 //№3 кнопка котрая открывает google.com
@@ -34,23 +34,23 @@ function openGoogle() {
 
 const outputLogMessageButton = document.querySelector('#output-message-log');
 
-outputLogMessageButton.addEventListener('click', () => outpytConsoleLog('ДЗ №4'))
+outputLogMessageButton.addEventListener('click', () => showMessage('ДЗ №4'))
 
-function outpytConsoleLog(message) {
+function showMessage(message) {
   alert(message)
   console.log(message)
 }
 
 //№5 при наведении на заголовок в консоли выводится контент элемента
 
-const changeТheСolor = document.querySelector('.main-title');
-changeТheСolor.addEventListener('mouseover', function () {
+const mainTitle = document.querySelector('.main-title');
+mainTitle.addEventListener('mouseover', function () {
   console.log(this.textContent);
 })
 
 //№6 кнопка которая меняет свой цвет при каждом нажатии
 
-const colorButtonAlternation = document.querySelector('#color-change');
-colorButtonAlternation.addEventListener('click', function (){
-  colorButtonAlternation.classList.toggle('green');
+const colorButtonAlternation = document.querySelector('#toogle-color-button');
+colorButtonAlternation.addEventListener('click', function(){
+  colorButtonAlternation.classList.toggle('bg-green');
 })
