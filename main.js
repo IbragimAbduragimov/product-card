@@ -50,7 +50,7 @@ mainTitle.addEventListener('mouseover', function () {
 
 //№6 кнопка которая меняет свой цвет при каждом нажатии
 
-const colorButtonAlternation = document.querySelector('#toogle-color-button');
+const colorButtonAlternation = document.querySelector('#toggle-color-button');
 colorButtonAlternation.addEventListener('click', function() {
   colorButtonAlternation.classList.toggle('bg-green');
 })
