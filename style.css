@@ -105,3 +105,12 @@
   margin-left: -320px; 
   z-index: -1;
 }
+
+.bg-black {
+  background-color: black ;
+}
+
+.bg-green {
+  background-color: aquamarine;
+}
+
