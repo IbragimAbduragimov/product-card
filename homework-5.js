@@ -8,8 +8,7 @@ determineWeather('Чили','55')
 
 //задача с значением скорости звука
 
-const SPEED_SOUND = 340
-function detectionSound() {
+function detectionSound(SPEED_SOUND) {
 
   if (SPEED_SOUND > 343) {
     console.log('Сверхзвуковая скорость')
@@ -22,7 +21,7 @@ function detectionSound() {
   }
 }
 
-detectionSound()
+detectionSound(343)
 
 //задача со своим продуктом
 
