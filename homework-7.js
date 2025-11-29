@@ -15,8 +15,8 @@ random.reverse()
 
 //импортировать comment.js
 import { exampleComment } from "./comments.js"
-const comm = exampleComment.filter(comment => comment.email.includes('.com'));
-console.log(comm)
+const filterCommentEmail = exampleComment.filter(comment => comment.email.includes('.com'));
+console.log(filterCommentEmail)
 
 //у пользователей с id меньше 5, postId будет = 2, а которых > 5 = 1 postId 
 
@@ -28,7 +28,7 @@ console.log(changeId)
 
 //задача в котором нужно перебрать массив таким образом чтобы он состоял из айди и имени
 
-const leaveIdName = exampleComment.map(comment => ({
+const leaveIdNameId = exampleComment.map(comment => ({
   id: comment.id,
   name: comment.name
 }))
@@ -44,3 +44,7 @@ exampleComment.reduce((Acc,  current) => {
   console.log(current);
   return Acc;
 }, null)
+
+//вывести в лог массив с помощью методов toString и join
+console.log(exampleComment.toString())
+console.log(exampleComment.join())
