@@ -14,19 +14,18 @@ const car = {
   model: 'granta',
   colour: 'blue',
   viewBox: 'mechanics',
+  owner: aboutMe
 }
 
-const owner = { ...aboutMe, ...car}
+const ownerCar = { ...aboutMe}
 
 //задача с максимальной скоростью
 const searchMaxSpeed = (car) => {
   if (!car.hasOwnProperty('maxSpeed')) {
-    car['maxSpeed'] = '180 км/ч'
+    car.maxSpeed = '180 км/ч'
   }
 }
-//написать функцию
-const receiveData = { ...car, ...searchMaxSpeed}
-console.log(receiveData)
+searchMaxSpeed(car)
 
 //создать массив с названиями продуктов
 const cards = [
@@ -38,7 +37,7 @@ const cards = [
 ]
 
 //задача с книгами 
-const booksLiteral = [
+const literalBooks = [
   {
     name: 'война и мир',
     autor: 'Л.Н.Толстой',
@@ -62,7 +61,7 @@ const booksLiteral = [
   }
 ] 
 
-const booksFantasy = [
+const fantasyBooks = [
   {
     name: 'Властелин колец',
     autor: 'Джон Р.Р.',
@@ -86,6 +85,6 @@ const booksFantasy = [
   }
 ] 
 
-const allBoocks = { ...booksLiteral, ...booksFantasy}
+const allBoocks = { ...literalBooks, ...fantasyBooks}
 //задача с map
-//const bringRareBook = allBoocks.map(book => ({ ...book, isRare: book.yearRelease >= 2000 })) 
+const bringRareBook = allBoocks.map(book => ({ ...book, isRare: book.yearRelease >= 2000 })) 
