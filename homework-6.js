@@ -16,8 +16,10 @@ const car = {
   viewBox: 'mechanics',
   owner: aboutMe
 }
+const changeId = exampleComment.map(array => ({
+  ...car, owner: aboutMe
+}))
 
-const ownerCar = { ...aboutMe}
 
 //задача с максимальной скоростью
 const searchMaxSpeed = (car) => {
