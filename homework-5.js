@@ -8,20 +8,17 @@ determineWeather('Чили','55')
 
 //задача с значением скорости звука
 
-function detectionSound(SPEED_SOUND) {
+const SPEED_SOUND = 343
 
-  if (SPEED_SOUND > 343) {
-    console.log('Сверхзвуковая скорость')
-  }
-  else if (SPEED_SOUND === 343) {
-    console.log('Скоростная скорость')
-  }
-   else {
-    console.log('Дозвуковая скорость')
+function detectSound(speed) {
+  if (speed > SPEED_SOUND) {
+    console.log('сверхзвуковая скорость')
+  } else if (speed === SPEED_SOUND) {
+    console.log('звуковая скорость')
+  } else {
+    console.log('дозвуковая скорость')
   }
 }
-
-detectionSound(343)
 
 //задача со своим продуктом
 
