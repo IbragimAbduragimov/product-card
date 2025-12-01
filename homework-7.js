@@ -1,3 +1,4 @@
+import { exampleComment } from "./comments.js"
 
 //создать массив чисел от 1 до 10 потом отфильтровать их так чтобы они начинались от 5
 
@@ -10,11 +11,13 @@ const random = ['knite', 'sofa', 'phone', 'copybook']
 
 
 //написать функцию которая аргументом будет принимать массивы и переворачиать их
-numbers.reverse()
-random.reverse()
-
+function reverseArrays(numbers, random) {
+  return numbers.reverse();
+  return random.reverse();
+}
+console.log(reverseArrays)
+reverseArrays(numbers, random)
 //импортировать comment.js
-import { exampleComment } from "./comments.js"
 const filterCommentEmail = exampleComment.filter(comment => comment.email.includes('.com'));
 console.log(filterCommentEmail)
 
@@ -35,14 +38,14 @@ const leaveIdNameId = exampleComment.map(comment => ({
 
 //добавить свойство которое измеряет размер сообщения и если объект > 180 = true
 
-const MeasureLengthComments = exampleComment.map(comment => ({
-  islnvalid: JSON.stringify(product).length > 180 ? true : false
+const measureLengthComments = exampleComment.map(comment => ({
+  islnvalid: (product).length > 180 ? true : false
 }))
-
+console.log(measureLengthComments)
   //вывести с помощью способа reduce в лог массив
-exampleComment.reduce((Acc,  current) => {
+exampleComment.reduce((acc,  current) => {
   console.log(current);
-  return Acc;
+  return acc;
 }, null)
 
 //вывести в лог массив с помощью методов toString и join
