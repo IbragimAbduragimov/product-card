@@ -4,19 +4,23 @@ import { exampleComment } from "./comments.js"
 
 const numbers = [1,2,3,4,5,6,7,8,9,10]
 const filterNumbers = numbers.filter (number => number >= 5)
-
 //создать массив из разных предметов и проверить есть ли в массиве определенная сущность
 
 const random = ['knite', 'sofa', 'phone', 'copybook']
 
 
 //написать функцию которая аргументом будет принимать массивы и переворачиать их
-function reverseArrays(numbers, random) {
-  return numbers.reverse();
-  return random.reverse();
+function reverseObjectNumbers(numbers) {
+  numbers.reverse()
+  return numbers
 }
-console.log(reverseArrays)
-reverseArrays(numbers, random)
+function reverseObjectRandom(random) {
+  random.reverse();
+  return random
+}
+reverseObjectNumbers(numbers)
+reverseObjectRandom(random)
+
 //импортировать comment.js
 const filterCommentEmail = exampleComment.filter(comment => comment.email.includes('.com'));
 console.log(filterCommentEmail)
@@ -39,7 +43,7 @@ const leaveIdNameId = exampleComment.map(comment => ({
 //добавить свойство которое измеряет размер сообщения и если объект > 180 = true
 
 const measureLengthComments = exampleComment.map(comment => ({
-  islnvalid: (product).length > 180 ? true : false
+  islnvalid: (comment).length > 180 ? true : false
 }))
 console.log(measureLengthComments)
   //вывести с помощью способа reduce в лог массив
