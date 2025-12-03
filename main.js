@@ -44,7 +44,7 @@ function showMessage(message) {
 //№5 при наведении на заголовок в консоли выводится контент элемента
 
 const mainTitle = document.querySelector('.main-title');
-mainTitle.addEventListener('mouseover', function() {
+mainTitle.addEventListener('mouseover', function () {
   console.log(this.textContent);
 })
 
