@@ -14,11 +14,8 @@ const car = {
   model: 'granta',
   colour: 'blue',
   viewBox: 'mechanics',
-  owner: aboutMe
 }
-const changeId = exampleComment.map(array => ({
-  ...car, owner: aboutMe
-}))
+car.owner = aboutMe
 
 
 //задача с максимальной скоростью
