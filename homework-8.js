@@ -1,10 +1,10 @@
 import { productCards } from "./product-cards.js";
+
 const productTemplate = document.getElementById('product-template');
 const productList = document.getElementById('product-list');
 
-function viewCards(count) {
-  const showCards = productCards.slice(0, count)
-  showCards.forEach(product => {
+
+  productCards.forEach(product => {
   const productClone = productTemplate.content.cloneNode(true);
   productClone.querySelector('.product-img').src = `/images/${product.img}.png`
   productClone.querySelector('.product-category').textContent = product.category
@@ -14,10 +14,13 @@ function viewCards(count) {
   productClone.querySelector('.product-price-label').textContent = product.priceLabel
   productClone.querySelector('.product-price').textContent = `${product.price} ₽`
   productList.appendChild(productClone) 
+  console.log(productClone)
   })
-}
-viewCards()
-const cardsName = productCards.reduce((acc, product) => (acc + (acc ? "; " : "") + product.name))
+  
+const cardsName = productCards.reduce((acc, product) => {
+  acc.push(productCards.name) + ';'
+  return acc
+}, [])
 console.log(cardsName)
 
 const namesLikeKeys = productCards.reduce((acc, product) => {
@@ -27,14 +30,4 @@ const namesLikeKeys = productCards.reduce((acc, product) => {
 
 console.log(namesLikeKeys)
 
-
-function requestAmountCards() {
-  const amount = Number(prompt('Сколько карточек отобразить? От 1 до 5'))
-    if(amount >= 1 && amount <= 5) {
-      viewCards(amount)
-    } else {
-      alert('количество карточек меньше требуемого запроса')
-    } 
-}
-
-requestAmountCards();
+ 
