@@ -31,18 +31,6 @@ const namesLikeKeys = productCards.reduce((acc, product) => {
 
 console.log(namesLikeKeys)
 
- 
-    //function requestAmountCards() {
-     // const amount = Number(prompt('Сколько карточек отобразить? От 1 до 5'))
-       // if(amount >= 1 && amount <= 5) {
-         // viewCards(amount)
-        //} else {
-          //alert('количество карточек меньше требуемого запроса')
-        //} 
-    //}
-
-//requestAmountCards();
-
 const initializeCards = () => {
   const userInput = prompt('Сколько карточек отобразить? От 1 до 5');
   const numberOfCards = Number(userInput);
