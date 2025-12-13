@@ -1,22 +1,23 @@
-import { productCards } from "./product-cards.js";
+import { productCards } from "./objects.js";
 
 const productTemplate = document.getElementById('product-template');
 const productList = document.getElementById('product-list');
 
-
-  productCards.forEach(product => {
-  const productClone = productTemplate.content.cloneNode(true);
-  productClone.querySelector('.product-img').src = `/images/${product.img}.png`
-  productClone.querySelector('.product-category').textContent = product.category
-  productClone.querySelector('.product-name').textContent = product.name
-  productClone.querySelector('.product-description').textContent = product.description
-  productClone.querySelector('.product-compound').innerHTML = product.compound.map(item => `<li>${item}</li>`).join("")
-  productClone.querySelector('.product-price-label').textContent = product.priceLabel
-  productClone.querySelector('.product-price').textContent = `${product.price} ₽`
-  productList.appendChild(productClone) 
-  console.log(productClone)
+  const viewCards = (productCards) => {
+    productCards.innerHTML = '';
+    productCards.forEach(product => {
+    const productClone = productTemplate.content.cloneNode(true);
+    productClone.querySelector('.product-img').src = product.img
+    productClone.querySelector('.product-category').textContent = product.category
+    productClone.querySelector('.product-name').textContent = product.name
+    productClone.querySelector('.product-description').textContent = product.description
+    productClone.querySelector('.product-compound').innerHTML = product.compound.map(item => `<li>${item}</li>`).join("")
+    productClone.querySelector('.product-price-label').textContent = product.priceLabel
+    productClone.querySelector('.product-price').textContent = `${product.price} ₽`
+    productList.appendChild(productClone) 
+    console.log(productClone)
   })
-  
+}
 const cardsName = productCards.reduce((acc, product) => {
   acc.push(productCards.name) + ';'
   return acc
@@ -31,3 +32,27 @@ const namesLikeKeys = productCards.reduce((acc, product) => {
 console.log(namesLikeKeys)
 
  
+    //function requestAmountCards() {
+     // const amount = Number(prompt('Сколько карточек отобразить? От 1 до 5'))
+       // if(amount >= 1 && amount <= 5) {
+         // viewCards(amount)
+        //} else {
+          //alert('количество карточек меньше требуемого запроса')
+        //} 
+    //}
+
+//requestAmountCards();
+
+const initializeCards = () => {
+  const userInput = prompt('Сколько карточек отобразить? От 1 до 5');
+  const numberOfCards = Number(userInput);
+
+  if (isNaN(numberOfCards) || numberOfCards < 1 || numberOfCards > 5) {
+    alert('Пожалуйста, введите число от 1 до 5');
+    return;
+  }
+
+  const selectProduct = productCards.slice(0, numberOfCards);
+  viewCards(selectProduct)
+}
+initializeCards()
