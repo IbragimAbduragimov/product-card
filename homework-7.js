@@ -10,16 +10,12 @@ const random = ['knite', 'sofa', 'phone', 'copybook']
 
 
 //написать функцию которая аргументом будет принимать массивы и переворачиать их
-function reverseObjectNumbers(numbers) {
-  numbers.reverse()
-  return numbers
+function reverseArray(array) {
+  return array.reverse()
 }
-function reverseObjectRandom(random) {
-  random.reverse();
-  return random
-}
-reverseObjectNumbers(numbers)
-reverseObjectRandom(random)
+reverseArray(numbers)
+reverseArray(random)
+
 
 //импортировать comment.js
 const filterCommentEmail = exampleComment.filter(comment => comment.email.includes('.com'));
@@ -43,7 +39,7 @@ const leaveIdNameId = exampleComment.map(comment => ({
 //добавить свойство которое измеряет размер сообщения и если объект > 180 = true
 
 const measureLengthComments = exampleComment.map(comment => ({
-  islnvalid: (comment).length > 180 ? true : false
+  islnvalid: comment.body.length > 180 ? true : false
 }))
 console.log(measureLengthComments)
   //вывести с помощью способа reduce в лог массив
