@@ -3,16 +3,14 @@ import { productCards } from "./objects.js";
 const productTemplate = document.getElementById('product-template');
 const productList = document.getElementById('product-list');
 
-  const viewCards = (productCards) => {
-    productCards.innerHTML = '';
+  const renderProducts = (productCards) => {
     productCards.forEach(product => {
     const productClone = productTemplate.content.cloneNode(true);
-    productClone.querySelector('.product-img').src = product.img
+    productClone.querySelector('.product-img').src = `images/${product.img}.png`
     productClone.querySelector('.product-category').textContent = product.category
     productClone.querySelector('.product-name').textContent = product.name
     productClone.querySelector('.product-description').textContent = product.description
     productClone.querySelector('.product-compound').innerHTML = product.compound.map(item => `<li>${item}</li>`).join("")
-    productClone.querySelector('.product-price-label').textContent = product.priceLabel
     productClone.querySelector('.product-price').textContent = `${product.price} ₽`
     productList.appendChild(productClone) 
     console.log(productClone)
@@ -41,6 +39,6 @@ const initializeCards = () => {
   }
 
   const selectProduct = productCards.slice(0, numberOfCards);
-  viewCards(selectProduct)
+  renderProducts(selectProduct)
 }
 initializeCards()
