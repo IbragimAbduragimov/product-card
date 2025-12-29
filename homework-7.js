@@ -10,11 +10,11 @@ const random = ['knite', 'sofa', 'phone', 'copybook']
 
 
 //написать функцию которая аргументом будет принимать массивы и переворачиать их
-function reverseArray(array) {
+function getArray(array) {
   return array.reverse()
 }
-reverseArray(numbers)
-reverseArray(random)
+getArray(numbers)
+getArray(random)
 
 
 //импортировать comment.js
