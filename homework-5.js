@@ -8,27 +8,23 @@ determineWeather('Чили','55')
 
 //задача с значением скорости звука
 
-let SPEED_SOUND = 343
-function detectionSound() {
+const SPEED_SOUND = 343
 
-  if (SPEED_SOUND > 343) {
-    console.log('Сверхзвуковая скорость')
-  }
-  else if (SPEED_SOUND === 343) {
-    console.log('Скоростная скорость')
-  }
-   else {
-    console.log('Дозвуковая скорость')
+function detectSound(speed) {
+  if (speed > SPEED_SOUND) {
+    console.log('сверхзвуковая скорость')
+  } else if (speed === SPEED_SOUND) {
+    console.log('звуковая скорость')
+  } else {
+    console.log('дозвуковая скорость')
   }
 }
-
-detectionSound()
 
 //задача со своим продуктом
 
 const product = 'chips' 
 const price = 200
-function calculatePrice(budget) {
+function buyProduct(budget) {
   if (budget >= price) {
     console.log('chips приобретён. Спасибо за покупку!')
   }
@@ -38,12 +34,11 @@ function calculatePrice(budget) {
   }
 }
 
-calculatePrice('250')
+buyProduct(250)
 
 //создать одну функцию
 
-function measureStrength() {
-  const woodStrength = 90;
+function measureStrength(woodStrength) {
   if (woodStrength >= 100) {
     console.log('этот материал обладает сильной прочностью')
   }
@@ -52,7 +47,7 @@ function measureStrength() {
   }
 }
 
-measureStrength()
+measureStrength(90)
 
 
 

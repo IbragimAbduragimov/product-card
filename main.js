@@ -54,3 +54,4 @@ const colorButtonAlternation = document.querySelector('#toggle-color-button');
 colorButtonAlternation.addEventListener('click', function() {
   colorButtonAlternation.classList.toggle('bg-green');
 })
+

@@ -37,7 +37,7 @@
           </div>
       </li>
       <li class="card-container">
-          <img src="images/moisturizing mask.png" alt="Увлажняющая маска" width="290" height="245">
+          <img src="images/moisturizing-mask.png" alt="Увлажняющая маска" width="290" height="245">
           <span class="product-category">для нормальной кожи</span>
           <h2 class="product-name">Увлажняющая маска</h2>
           <p class="product-description">Способствует удерживанию влаги в верхних слоях кожи.</p>
@@ -53,7 +53,7 @@
           </div>
       </li>
       <li class="card-container">
-          <img src="images/washing gel.png" alt="Гель для умывания" width="290" height="245">
+          <img src="images/washing-gel.png" alt="Гель для умывания" width="290" height="245">
           <span class="product-category">для нормальной кожи</span>
           <h2 class="product-name">Гель для умывания</h2>
           <p class="product-description">Интенсивно очищает, не повреждает защитный барьер кожи.</p>
@@ -69,7 +69,7 @@
           </div>
       </li>
       <li class="card-container">
-          <img src="images/gift-set №1.png" alt="Подарочный набор №1" width="290" height="245">
+          <img src="images/gift-set-1.png" alt="Подарочный набор №1" width="290" height="245">
           <span class="product-category">для нормальной кожи</span>
           <h2 class="product-name">Подарочный набор №1</h2>
           <p class="product-description">Набор, состоящий из увлажняющего крема и маски</p>
@@ -85,7 +85,7 @@
           </div>
       </li>
       <li class="card-container">
-          <img src="images/gift-set №5.png" alt="gift-set" width="290" height="245">
+          <img src="images/gift-set-5.png" alt="gift-set" width="290" height="245">
           <span class="product-category">для нормальной кожи</span>
           <h2 class="product-name">Подарочный набор №5</h2>
           <p class="product-description">Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.</p>
@@ -103,10 +103,31 @@
     </ul>
   </div>
   <script src="main.js"></script>
+  <script type="module" src="homework-8.js"></script>
+  <script type="module" src="objects.js"></script>
+  <script src="/homework-5.js"></script>
+  <script src="/homework-6.js"></script>
+  <script src="/homework-7.js"></script>
   <script src="homework-5.js"></script>
-  <script src="homework-6.js"></script>
-  <script type="module" src="homework-7.js"></script>
 </body>
 </html>
+
+
+<ul id="product-list"></ul>
+
+<template id="product-template">
+    <li class="card-container">
+      <img class="product-img" alt="img" width="290" height="245">
+      <span class="product-category"></span>
+      <h3 class="product-name"></h3>
+      <p class="product-description"></p>
+      <span>Состав:</span>
+      <ul class="product-compound"></ul>
+      <div class="product-price-container">
+        <span class="product-price-label">Цена</span>
+        <span class="product-price">&#8381</span>
+      </div>
+    </li>
+</template>
 
 
