@@ -1,57 +1,42 @@
-//№1 кнопка которая меняет цвет карточки
+import './comments.js'
+import './homewor-4.js'
+import './homework-5.js'
+import './homework-6.js'
+import './homework-7.js'
+import './homework-8.js'
+import './homework-9.js'
+import { Modal } from './modal.js'
 
-const productCard = document.querySelector('.card-container');
-const changeColorCardButton = document.querySelector('#change-color-card');
+//по аналогии из лекции создать такой же шаблон
+class Gadjet {
+  constructor(name, brand) {
+    this.name = name
+    this.brand = brand
+  }
+} 
 
-changeColorCardButton.addEventListener('click', () => {
-  productCard.style.backgroundColor = 'red';
-})
-
-//№2 кнопка которая меняет цвет всех карточек
-
-const productCards = document.querySelectorAll('.card-container')
-const changeColorCardsButton = document.querySelector('#change-color-all-cards');
-
-
-changeColorCardsButton.addEventListener('click', () => {
-productCards.forEach((cards) => cards.style.backgroundColor = 'blue')
-});
-
-//№3 кнопка котрая открывает google.com
-const openGoogleButton = document.querySelector('#open-google')
-
-openGoogleButton.addEventListener('click', openGoogle)
-
-function openGoogle() {
-  const answer = confirm('Вы действительно хотите открыть Google?')
-
-  if (answer === true) {
-    window.open('https://google.com')
+class Phone extends Gadjet {
+  constructor(name, brand, display) {
+  super(name, brand)
+  this.display = display
+  }
+  
+  describe() {
+    console.log(`${this.brand}, ${this.name}, has an ${this.display} display`)
   }
 }
+const Iphone = new Phone('iphone', 'iphone 13', 'OLED')
+Iphone.describe()
+//создать класс который будет
+//1) открывать модалку
+// 2) закрыть модалку через кнопку регистрация
+// 3) проверить открыта ли модалка 
+// 4) закрыть модалку через кнопку X
 
-  //№4 кнопка для вывода сообщения в лог и консоль
+const modalPenalties = new Modal('1')
+modalPenalties.openModal()
+modalPenalties.checkOpen()
+modalPenalties.closeModal()
+modalPenalties.listenerButton()
 
-const outputLogMessageButton = document.querySelector('#output-message-log');
-
-outputLogMessageButton.addEventListener('click', () => showMessage('ДЗ №4'))
-
-function showMessage(message) {
-  alert(message)
-  console.log(message)
-}
-
-//№5 при наведении на заголовок в консоли выводится контент элемента
-
-const mainTitle = document.querySelector('.main-title');
-mainTitle.addEventListener('mouseover', function () {
-  console.log(this.textContent);
-})
-
-//№6 кнопка которая меняет свой цвет при каждом нажатии
-
-const colorButtonAlternation = document.querySelector('#toggle-color-button');
-colorButtonAlternation.addEventListener('click', function() {
-  colorButtonAlternation.classList.toggle('bg-green');
-})
 
