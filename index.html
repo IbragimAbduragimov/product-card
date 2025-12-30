@@ -11,6 +11,20 @@
 </head>
 <body>
   <script type="module" src="comments.js"></script>
+  <div id="overlay"></div>
+  <button id="penalties">Аунтефикация</button>
+  <div class="modal">
+    <form class="modal-form">
+      <button class="close-button">x</button>
+      <h1 class="open-button">Авторизация</h1>
+      <p class="modal-login-text">логин</p>
+      <input class="modal-login">
+      <p class="modal-password-text">пароль</p>
+      <input class='modal-password' type="password" required>
+      <p></p>
+      <button type='submit' class="modal-button">войти</button>
+    </form>
+  </div>
   <button id="change-color-all-cards">Сменить цвет всех карточек</button>
   <button id="change-color-card">Сменить цвет первой карточки</button>
   <button id="open-google">Открыть страницу google.com</button>
@@ -101,9 +115,70 @@
           </div>
       </li>
     </ul>
+    <div>
+      <form class="form-container" id="form-container">
+        <h3 class="h3">регистрация</h3>
+        <label>
+          <input placeholder="напиши свое имя..." class="name-input" required> имя
+        </label>
+        <label>
+          <input placeholder="напиши фамилию..." class="surname-input" required> фамилия
+        </label>
+        <label>
+          <input class="date-input" type="date" required> дата
+        </label>
+        <label>
+          <input placeholder="напиши логин..." class="login-input" required> логин
+        </label>
+        <label>
+          <input placeholder="напиши пароль..." class="password-input" type="password" required> пароль
+        </label>
+        <label>
+          <input placeholder="повторный пароль..." class="password2-input" type="password" required> повторный пароль
+        </label>
+        <button class="registr-button" type="submit">регистрация</button>
+      </form>
+    </div>
+    <div class="container-footer"> 
+      <footer>
+          <ul class="container-product-footer">
+            <li>
+              <div class="container-title">
+                <h3 class="footer-title">Product Cards</h1>
+                <p class="hero-title">У нас самые лучшие продукты для кожи!</p>
+                <div class="icon-container">
+                  <a class="icon-tg" href=""><img src="./images/icon-tg.png" alt="Написать в Telegram"></a>
+                  <a class="icon-vk" href=""><img src="./images/icon-vk.png" alt="Написать в Vkontakt"></a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="nav">
+                <span class="name">Подпишись на наши акции:</span>
+                <form class="subscription-product" id="email-form">
+                  <input class="email-input" placeholder="Введи Email..." type="email" name="userEmail" required>
+                  <button class="subscription-button" type="submit">Подписаться</button>
+                </form>
+                <span class="border-left"></span>
+                <hr class="hr-line">
+                <a class="product-link" href="www.product-cards.com">www.product-cards.com©all right reserve</a>
+              </div>
+            </li>
+            <li>
+              <nav class="container-links">
+                <span class="link-title">Быстрые ссылки</span>
+                <p class="fast-link" href="">Главная</a>
+                <p class="fast-link" href="">Магазин</a>
+                <p class="fast-link" href="">Контакты</a>
+              </nav>
+            </li>
+          </ul>
+      </footer>
+    </div>
   </div>
   <script src="main.js"></script>
   <script type="module" src="homework-8.js"></script>
+  <script type="module" src="homework-9.js"></script>
   <script type="module" src="objects.js"></script>
   <script src="/homework-5.js"></script>
   <script src="/homework-6.js"></script>
