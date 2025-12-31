@@ -1,4 +1,4 @@
-import './homework-10.js'
+
 //сделал так чтобы при отправке через кнопку не перезагружалась и
 //выводилась в консоль лог
 const emailForm = document.getElementById('email-form')
@@ -35,25 +35,22 @@ closeButton.addEventListener('click', () => {
 
 
 
-let user
 
-const login = document.querySelector('.login-input').value;
-const password = document.querySelector('.password-input')
-const confirmPassword = document.querySelector('.password2-input');
-const registForm = document.querySelector('#form-container');
-
-registForm.addEventListener('submit', (event) => {
+const form = document.querySelector('.modal-form')
+form.addEventListener('submit', (event) => {
   event.preventDefault();
-    if (password.value !== confirmPassword.value) {
-      alert('Пароли не совпадают');
+  const formData = {
+    name: document.querySelector('.name-input').value,
+    surname:  document.querySelector('.surname-input').value,
+    data:  document.querySelector('.date-input').value,
+    login:  document.querySelector('.login-input').value,
+    password:  document.querySelector('.password-input').value,
+    password2:  document.querySelector('.password2-input').value,
+  } 
+  if (formData.password !== formData.password2) {
+    console.log('пароли не совпадают или форма не валидна')
+  } 
+  else {
+    console.log(formData)
   }
-    else {
-      console.log('все норм')
-    };
-
-  const form = event.target;
-  const data = new FormData(form);
-  user = Object.fromEntries(data.entries());
-  user.createdOn  = new Date();
-  console.log(user);
-});
+})

@@ -283,10 +283,10 @@
   .modal {
     background-color: black;
     position: fixed;
-    top: 35%;
+    top: 20%;
     left: -400%;
-    width: 20%;
-    height: 30%;
+    width: 25%;
+    height: 60%;
     z-index: 3;
     display: flex;
     flex-wrap: wrap;
