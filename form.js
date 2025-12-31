@@ -1,25 +1,22 @@
 export class Modal {
   constructor(id) {
     this.id = id
-    this.form = document.querySelector('.form-container')
   }
-get() {
-  this.emailData = Object.fromEntries(this.form)
-  console.log(this.emailData)
+getInfo() {
+  this.form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    this.form = document.querySelector('.form-container').value
+    console.log(this.form)
+  })
 }
 
   checkValidity() {
-    this.form.checkValidity() ? true : false
+    return this.form.checkValidity()
 }
   reset() {
-    this.form .reset()
+    this.form.reset()
   }
 }
-const emailForm = document.getElementById('email-form')
-emailForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const form = event.target;
-  const formData = new FormData(form);
-  const emailData = Object.fromEntries(formData.entries());
-  console.log(emailData);
-});
+
+const modalRegist = new Modal('1')
+modalRegist.getInfo()
