@@ -21,9 +21,6 @@ openModalButton.addEventListener('click', () => {
   overlay.classList.add('active')
 })
 
-const modalLogin = document.querySelector('.modal-login')
-const modalPassword = document.querySelector('.modal-password')
-const loginInput = document.querySelector('login-input')
 const closeButton = document.querySelector('.close-button')
 closeButton.addEventListener('click', () => {
   modal.classList.remove('showed')
@@ -32,25 +29,21 @@ closeButton.addEventListener('click', () => {
 
 //добавить поле для регистрации праверить валидность формы и идентичность паролей
 //также вывести все это в консоль лог
+const passwordModal = document.querySelector('.password-input')
+const password2Modal = document.querySelector('.password2-input')
+let user = undefined;
 
-
-
-
-const form = document.querySelector('.modal-form')
-form.addEventListener('submit', (event) => {
+const modalForm = document.getElementById('modal-form')
+modalForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  const formData = {
-    name: document.querySelector('.name-input').value,
-    surname:  document.querySelector('.surname-input').value,
-    data:  document.querySelector('.date-input').value,
-    login:  document.querySelector('.login-input').value,
-    password:  document.querySelector('.password-input').value,
-    password2:  document.querySelector('.password2-input').value,
-  } 
-  if (formData.password !== formData.password2) {
+  if (passwordModal.value !== password2Modal.value || !modalForm.checkValidity()) {
     console.log('пароли не совпадают или форма не валидна')
   } 
   else {
-    console.log(formData)
+    const form = event.target
+    const data = new FormData(form)
+    user = Object.fromEntries(data.entries())
+    console.log(user)
   }
 })
+3
