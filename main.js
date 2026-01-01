@@ -5,7 +5,8 @@ import './homework-6.js'
 import './homework-7.js'
 import './homework-8.js'
 import './homework-9.js'
-import { Modal } from './modal.js'
+import './modal.js'
+import './form.js'
 
 //по аналогии из лекции создать такой же шаблон
 class Gadjet {
