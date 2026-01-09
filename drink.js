@@ -1,73 +1,32 @@
 //создать абстрактный класс drink
-class Drink {
+
+export class Drink {
   #temperature
   constructor(name, size, price, temperature) {
     this.name = name;
     this.size = size;
     this.price = price;
-    this.#temperature = temperature
+    this.#temperature = temperature;
   }
   getInfo() {
-    console.log(`${this.name} стоит ${this.price}$ в объеме ${this.size} мл`)
+    console.log(`${this.name} стоит ${this.price}$ в объеме ${this.size} мл`);
   }
   getTemperature() {
-    console.log(this.#temperature)
+    console.log(this.#temperature);
   }
-  establishTemperature(newTemperature) {
-    this.#temperature = newTemperature
+  setTemperature(newTemperature) {
+    this.#temperature = newTemperature;
   }
   #prepareDrink() {
     this.getInfo();
     this.getTemperature();
     this.establishTemperature();
-    console.log(`${this.name} готовится. готово`)
+    console.log(`${this.name} готовится. готово`);
   }
-  giveDrink() {
-    this.#prepareDrink()
-    console.log(`напиток готов, можете забирать!`)
+   presetDrinkDrink() {
+    this.#prepareDrink();
+    console.log(`напиток готов, можете забирать!`);
   }
 }
 
 //создать от них наследников
-class Limonad extends Drink {
-  constructor(name, size, price, temperature, carbonation, color) {
-    super(name, size, price, temperature)
-    this.carbonation = carbonation;
-    this.color = color;
-  }
-}
-
-
-class Coffee extends Drink {
-  constructor(name, size, price, temperature, roasting, strength) {
-    super(name, size, price, temperature)
-    this.roasting = roasting;
-    this.strength = strength;
-  }
-}
-
-
-
-class Tea extends Drink {
-  constructor(name, size, price, temperature, sweetness, strength) {
-    super(name, size, price, temperature)
-    this.sweetness = sweetness;
-    this.strength = strength;
-  }
-}
-
-
-class Soda extends Drink {
-  constructor(name, size, price, temperature, carbonation, taste) {
-    super(name, size, price, temperature)
-    this.carbonation = carbonation;
-    this.taste = taste
-  }
-}
-
-//создать переменный на основе ранних наследников
-const limonad = new Limonad('холодный лимонад', '400', '2', '0', 'среднегазированный', 'зеленый')
-const coffee = new Coffee('экспрессо', '200', '1.5', '0', 'средняя обжарка', 'крепкий')
-const tea = new Tea('чай с лимоном', '350', '1', '0', 'сладкий', 'некрепкий')
-const soda = new Soda('газированный напиток', '450', '0.5', '0', 'сильногазированный', 'клубничный')
-
