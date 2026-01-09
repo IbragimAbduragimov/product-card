@@ -7,6 +7,7 @@
   line-height: 18px;
   color: #515076;
   font-weight: 400;
+  color: rgba(255, 255, 255, 1);
 }
 
 .card-container {
@@ -116,10 +117,6 @@
 
 /* добавил стили для footer */
 
-  h3,p,a,span,button{
-    color: rgba(255, 255, 255, 1);
-
-  }
 
   .container-footer{
     background-color: rgba(58, 58, 58, 1);
