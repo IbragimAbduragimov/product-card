@@ -1,17 +1,18 @@
-
 //сделал так чтобы при отправке через кнопку не перезагружалась и
 //выводилась в консоль лог
-function  outputValue() {
-    const form = event.target
-    const data = new FormData(form)
-    user = Object.fromEntries(data.entries())
-    console.log(user)
+let user = undefined;
+
+function logFormData() {
+  const form = event.target;
+  const data = new FormData(form);
+  user = Object.fromEntries(data.entries());
+  return console.log(user);
 }
 
 const emailForm = document.getElementById('email-form')
 emailForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  outputValue();
+  logFormData();
 });
 
 
@@ -23,19 +24,18 @@ const overlay = document.querySelector('#overlay');
 openModalButton.addEventListener('click', () => {
   modal.classList.add('showed');
   overlay.classList.add('active');
-})
+});
 
 const closeButton = document.querySelector('.close-button');
 closeButton.addEventListener('click', () => {
   modal.classList.remove('showed');
   overlay.classList.remove('active');
-})
+});
 
 //добавить поле для регистрации праверить валидность формы и идентичность паролей
 //также вывести все это в консоль лог
 const password = document.querySelector('.password');
 const confirmPassword = document.querySelector('.confirmPassword');
-let user = undefined;
 
 const modalForm = document.getElementById('modal-form');
 modalForm.addEventListener('submit', (event) => {
@@ -44,7 +44,7 @@ modalForm.addEventListener('submit', (event) => {
     console.log('пароли не совпадают или форма не валидна');
   } 
   else {
-    outputValue();
+    logFormData();
   }
-})
+});
 
