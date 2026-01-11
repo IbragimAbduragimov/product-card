@@ -1,4 +1,4 @@
-import { Drink } from "./drink.js";
+import { Drink } from "./Drink.js";
 
 class Tea extends Drink {
   constructor(name, size, price, temperature, sweetness, strength) {
@@ -10,5 +10,3 @@ class Tea extends Drink {
     console.log(this.name, this.size, this.price, this.temperature, this.sweetness, this.strength);
   }
 }
-
-const lemonad = new Limonad('холодный лимонад', '400', '2', '0', 'среднегазированный', 'зеленый');

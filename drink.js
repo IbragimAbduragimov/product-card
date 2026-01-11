@@ -8,22 +8,27 @@ export class Drink {
     this.price = price;
     this.#temperature = temperature;
   }
+
   getInfo() {
     console.log(`${this.name} стоит ${this.price}$ в объеме ${this.size} мл`);
   }
+
   getTemperature() {
     console.log(this.#temperature);
   }
+
   setTemperature(newTemperature) {
     this.#temperature = newTemperature;
   }
+
   #prepareDrink() {
     this.getInfo();
     this.getTemperature();
     this.establishTemperature();
     console.log(`${this.name} готовится. готово`);
   }
-   presetDrinkDrink() {
+  
+  presetDrinkDrink() {
     this.#prepareDrink();
     console.log(`напиток готов, можете забирать!`);
   }
