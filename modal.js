@@ -3,7 +3,9 @@
 // 2) закрыть модалку через кнопку регистрация
 // 3) проверить открыта ли модалка 
 // 4) закрыть модалку через кнопку X
+
 export class Modal {
+
   constructor(id) {
     this.id = id;
     this.openButton = document.querySelector('#penalties');
@@ -12,6 +14,7 @@ export class Modal {
     this.closeButtonX = document.querySelector('.close-button');
     this.modal = document.querySelector('.modal');
   }
+
   open() {
     this.modal.classList.add('modal-showed');
     this.overlay.classList.add('overlay-showed');
@@ -25,10 +28,11 @@ export class Modal {
   isOpen() {
     return this.modal.classList.contains('modal-showed');
   }
+
   listenerButton() {
     this.closeButtonX.addEventListener('click', ()=> {
       this.modal.classList.remove('showed');
       this.overlay.classList.remove('active');
-  })}
+    });
+  }
 }
-const modalPenalties = new Modal('1');
