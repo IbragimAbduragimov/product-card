@@ -1,4 +1,4 @@
-//создать абстрактный класс drink
+//создать абстрактный класс Drink
 
 export class Drink {
   #temperature
