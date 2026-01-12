@@ -2,17 +2,17 @@
 //выводилась в консоль лог
 let user = undefined;
 
-function logFormData() {
+function getUser() {
   const form = event.target;
   const data = new FormData(form);
   user = Object.fromEntries(data.entries());
-  return console.log(user);
+  console.log(user);
 }
 
 const emailForm = document.getElementById('email-form')
 emailForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  logFormData();
+  getUser();
 });
 
 
@@ -44,7 +44,7 @@ modalForm.addEventListener('submit', (event) => {
     console.log('пароли не совпадают или форма не валидна');
   } 
   else {
-    logFormData();
+    getUser();
   }
 });
 
