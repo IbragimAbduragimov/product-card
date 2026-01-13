@@ -5,14 +5,13 @@ export class Form {
     this.user = undefined;
   }
 
-  getInfo(form) {
-    this.form.addEventListener('submit', (event) => {
-      event.preventDefault();
-        this.form = event.target;
-        this.data = new FormData(form);
-        this.user = Object.fromEntries(data.entries());
-        console.log(user);
-    })
+  getValues() {
+    const formData = new FormData(this.form);
+    const data = Object.fromEntries(formData.entries());
+
+    this.form.reset();
+
+    return data;
   }
 
   checkValidity() {
