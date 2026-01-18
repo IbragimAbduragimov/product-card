@@ -2,17 +2,16 @@
 //выводилась в консоль лог
 let user = undefined;
 
-function getFormValue() {
+function getFormValue(event) {
   const form = event.target;
   const data = new FormData(form);
-  user = Object.fromEntries(data.entries());
-  return user;
+  const value = Object.fromEntries(data.entries());
+  return value;
 }
 
 const emailForm = document.getElementById('email-form')
 emailForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  console.log(getFormValue());
+  console.log(getFormValue(event));
 });
 
 //сделать модалку которая открывается при нажатии на кнопку, добавить overlay
@@ -43,7 +42,7 @@ modalForm.addEventListener('submit', (event) => {
     console.log('пароли не совпадают или форма не валидна');
   } 
   else {
-    console.log(getFormValue());
+    user = getFormValue(event);
+    console.log(user);
   }
 });
-
