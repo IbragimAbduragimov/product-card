@@ -114,3 +114,43 @@
   background-color: aquamarine;
 }
 
+  .modal {
+    background-color: black;
+    position: fixed;
+    top: 35%;
+    left: -400%;
+    width: 20%;
+    height: 30%;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .modal.showed{
+    left:40% !important
+  }
+
+.modal-button {
+  margin-top: 30px;
+  border-radius: 15px;
+  color: black;
+  border: none;
+}
+
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-login-text {
+  margin-top: 15px;
+  display: block;
+}
+
+
+.modal-password-text {
+  padding-top: 15px;
+  display: block;
+}
+

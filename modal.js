@@ -7,7 +7,7 @@
 export class Modal {
 
   constructor(id) {
-    this.id = id;
+    this.id = document.querySelector(id);
     this.openButton = document.querySelector('#penalties');
     this.closeBudottonRegist = document.querySelector('.modal-button');
     this.overlay = document.querySelector('#overlay');
@@ -16,12 +16,14 @@ export class Modal {
   }
 
   open() {
-    this.modal.classList.add('modal-showed');
-    this.overlay.classList.add('overlay-showed');
+    this.openButton.addEventListener('click', () => {
+      this.modal.classList.add('modal-showed');
+      this.overlay.classList.add('overlay-showed');
+    });
   }
 
   close() {
-    this.modal.classList.remove('modal-showed');
+    this.id.classList.remove('modal-showed');
     this.overlay.classList.remove('overlay-showed');
   }
 
@@ -31,7 +33,7 @@ export class Modal {
 
   listenerButton() {
     this.closeButtonX.addEventListener('click', ()=> {
-      this.modal.classList.remove('showed');
+      this.id.classList.remove('showed');
       this.overlay.classList.remove('active');
     });
   }

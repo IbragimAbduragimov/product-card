@@ -1,17 +1,16 @@
 export class Form {
 
   constructor(id) {
-    this.id = id;
+    this.id = document.querySelector(id);
     this.user = undefined;
   }
 
   getValues() {
-    const formData = new FormData(this.form);
-    const data = Object.fromEntries(formData.entries());
-
-    this.form.reset();
-
-    return data;
+    this.form.addEventListener('click', () => {
+      const formData = new FormData(this.form);
+      const data = Object.fromEntries(formData.entries());
+      return data;
+    })
   }
 
   checkValidity() {
