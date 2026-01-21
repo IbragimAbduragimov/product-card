@@ -17,8 +17,8 @@ export class Modal {
 
   open() {
     this.openButton.addEventListener('click', () => {
-      this.modal.classList.add('modal-showed');
-      this.overlay.classList.add('overlay-showed');
+      this.modal.classList.add('showed');
+      this.overlay.classList.add('active');
     });
   }
 
