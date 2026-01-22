@@ -21,10 +21,10 @@ car.owner = aboutMe
 //задача с максимальной скоростью
 const searchMaxSpeed = (car) => {
   if (!car.hasOwnProperty('maxSpeed')) {
-    car.maxSpeed = '180 км/ч'
+    car.maxSpeed = '180 км/ч';
   }
 }
-searchMaxSpeed(car)
+searchMaxSpeed(car);
 
 //создать массив с названиями продуктов
 const cards = [
@@ -84,6 +84,6 @@ const fantasyBooks = [
   }
 ] 
 
-const allBoocks = { ...literalBooks, ...fantasyBooks}
+const allBoocks = { ...literalBooks, ...fantasyBooks };
 //задача с map
-const bringRareBook = allBoocks.map(book => ({ ...book, isRare: book.yearRelease >= 2000 })) 
+const bringRareBook = allBoocks.map(book => ({ ...book, isRare: book.yearRelease >= 2000 }));

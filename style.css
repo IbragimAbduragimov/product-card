@@ -7,6 +7,7 @@
   line-height: 18px;
   color: #515076;
   font-weight: 400;
+  color: rgba(255, 255, 255, 1);
 }
 
 .card-container {
@@ -114,3 +115,242 @@
   background-color: aquamarine;
 }
 
+/* добавил стили для footer */
+
+
+  .container-footer{
+    background-color: rgba(58, 58, 58, 1);
+    width: 1728px;
+    height: 477px;
+    padding-top: 15px;
+  }
+
+  .container-product-footer{
+    margin-right: 75px;
+    margin-left: 84px;
+    margin-top: 85px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+  }
+
+  .container-title{
+    width: 409px;
+    height: 147px;
+  }
+
+  .nav{
+    width: 477px;
+    height: 103px;
+  }
+
+  .container-links{
+    width: 178px;
+    height: 147px;
+  }
+
+  .product-link{
+    margin-top: 195px;
+  }
+
+  .footer-title{
+    margin-bottom: 51.5px;
+    margin-bottom: 16px;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 154%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+  }
+
+  .hero-title{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 154%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+  }
+
+  .name{
+    display: block;
+    margin-left: 60px;
+    margin-bottom: 13px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .subscription-button{
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .product-link{
+    margin-left: 45px;
+    width: 376px;
+    display:block;
+    margin-top: 33px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+  }
+
+  .link-title{
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 23px;
+    display: block;
+  }
+
+  .fast-link{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    display: block;
+    margin-bottom: 17px;
+
+  }
+
+
+  .icon-vk{
+    margin-left: 30.5px;
+  }
+  .subscription-product{
+    display: flex;
+    background-color: rgba(58, 58, 58, 1);
+    height: 61px;
+  }
+
+  .icon-container{
+    display: block;
+    margin-top: 51.5px;
+  }
+
+  .subscription-button{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: rgba(0, 0, 0, 1);
+    width: 160px;
+  }
+
+  .email-input{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 317px;
+  }
+
+
+  .subscription-button, 
+  .email-input{
+    border: none;
+    border-right: none;
+    background: rgba(255, 255, 255, 1);
+  } 
+
+  .hr-line{
+    margin-top: 206px;
+    margin-left: 202px;
+    width: 66px;
+  }
+
+  #overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.0);
+    display: block;
+    z-index: -1;
+  }
+
+  #overlay.active {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .modal {
+    background-color: black;
+    position: fixed;
+    top: 20%;
+    left: -400%;
+    width: 25%;
+    height: 60%;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .modal.showed{
+    left:40% !important
+  }
+
+.modal-button {
+  margin-top: 30px;
+  border-radius: 15px;
+  color: black;
+  border: none;
+}
+
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-login-text {
+  margin-top: 15px;
+  display: block;
+}
+
+
+.modal-password-text {
+  padding-top: 15px;
+  display: block;
+}
+/*стили для регистрации*/
+.form-container {
+  width: 500px;
+  height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color:rgb(38, 13, 49);
+  flex-direction: column;
+  font-size: 25px;
+  margin: 10px;
+}
+
+label{
+  margin: 20px;
+  font-size: 25px;
+}
+
+input{
+  font-size: 20px;
+}
+
+.registr-button {
+  color: black;
+  margin-top: 100px;
+}
+
+.h3{
+  font-size: 30px;
+}
+
+.close-button{
+  top: 0px;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+}
