@@ -6,25 +6,20 @@
 
 export class Modal {
 
-  constructor(id) {
-    this.id = document.querySelector(id);
-    this.openButton = document.querySelector('#penalties');
-    this.closeBudottonRegist = document.querySelector('.modal-button');
-    this.overlay = document.querySelector('#overlay');
-    this.closeButtonX = document.querySelector('.close-button');
-    this.modal = document.querySelector('.modal');
+  constructor(modalId) {
+    this.modal = document.getElementById(modalId);
+    this.overlay = document.getElementById('overlay');
+    this.closeButton = this.modal.querySelector('.close-button');
   }
 
   open() {
-    this.openButton.addEventListener('click', () => {
-      this.modal.classList.add('showed');
-      this.overlay.classList.add('active');
-    });
+    this.modal.classList.add('showed');
+    this.overlay.classList.add('active');
   }
 
   close() {
-    this.id.classList.remove('modal-showed');
-    this.overlay.classList.remove('overlay-showed');
+    this.modal.classList.remove('showed');
+    this.overlay.classList.remove('active');
   }
 
   isOpen() {
@@ -33,7 +28,7 @@ export class Modal {
 
   listenerButton() {
     this.closeButtonX.addEventListener('click', ()=> {
-      this.id.classList.remove('showed');
+      this.modal.classList.remove('showed');
       this.overlay.classList.remove('active');
     });
   }
