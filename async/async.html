@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>UsersData</title>
+</head>
+<body>
+  <div class="container">
+    <div class="btn-container">
+      <button class="button" id="btn-delete-them">Удалить всех пользователей</button>
+      <button class="button" id="btn-show-all">Показать всех пользователей</button>
+    </div>
+    <div id="loading-container">
+      <h1>Данные загружаются.</h1>
+      <p>Пожалуйста, подождите.</p>
+    </div>
+    <ul id="users"></ul>
+    <template id="user-template">
+      <div class="user-container">
+        <img class="user-img" width="250px">
+        <span class="user-id"></span>
+        <span class="user-name"></span>
+        <span class="user-surname"></span>
+        <span class="user-email"></span>
+        <span class="user-age"></span>
+        <button class="btn-delete-user">Удалить пользователя</button>
+      </div>
+    </template> 
+  </div>
+</body>
+<script src="async.js"></script>
+</html>

@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0px;
+  font-family: Montserrat; 
+  font-weight: 400;
+  list-style: none;
+  background: none;
+}
+
+.container {
+  margin-top: 300px;
+  width: 1280px;
+  height: 1700px;
+}
+
+#users {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px;
+  justify-content: center;
+}
+
+.users-delete {
+  display: none !important;
+}
+
+.user-container {
+  width: 340px;
+  height: 573px;
+  padding: 45px;
+  background-color:#F7F7FA ;
+  box-shadow: 2px 2px 10px 0px rgba(81, 80, 118, 0.1);
+  font-size: 30px;
+}
+
+#loading-container {
+  display: block;
+  width: 100px;
+  margin: 50%;
+  font-size: 35px;
+}
+
+.btn-container {
+  display: flex;
+  height: 60px;
+  justify-content: center;
+}
+
+.button {
+  font-size: 25px;
+  margin-right: 20px;
+  border-radius: 25px;
+}
+
+#btn-delete-user {
+  font-size: 25px;
+}
