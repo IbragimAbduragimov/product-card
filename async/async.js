@@ -33,7 +33,7 @@ function renderUsers(users = []) {
   const loading = document.getElementById('loading-container');
 
   loading.style.display = 'none';
-  userList.innerHTML = '';
+  userList.innerHTML = ' ';
 
   users.forEach(user => {
     const userClone = userTemplate.content.cloneNode(true);
