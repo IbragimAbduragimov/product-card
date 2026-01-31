@@ -86,4 +86,4 @@ const fantasyBooks = [
 
 const allBoocks = { ...literalBooks, ...fantasyBooks}
 //задача с map
-const bringRareBook = allBoocks.map(book => ({ ...book, isRare: book.yearRelease >= 2000 })) 
+const bringRareBook = () => allBoocks.map(book => ({ ...book, isRare: book.yearRelease >= 2000 })) 
