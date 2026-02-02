@@ -32,7 +32,7 @@ export class Modal {
     return this.modal.classList.contains('modal-showed');
   }
 
-  initButton() {
+  initClose() {
     this.closeButtonX.addEventListener('click', ()=> {
       this.modal.classList.remove('showed');
       this.overlay.classList.remove('active');
